@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -6,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const HeroSection = () => {
-  const imageRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef(null); // ✅ Removed TypeScript type
 
   useEffect(() => {
     const imageElement = imageRef.current;
