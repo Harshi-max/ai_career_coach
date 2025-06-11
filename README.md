@@ -1,6 +1,6 @@
 # 💼 Full Stack AI Career Coach
 
-An AI-powered career assistant built with **Next.js**, **Neon DB**, **TailwindCSS**, **Prisma**, **Inngest**, and **Shadcn/UI**. Offers personalized job guidance, onboarding flow, and modern full-stack architecture.
+An AI-powered career assistant built with **Next.js**, **Neon DB**, **TailwindCSS**, **Prisma**, **Inngest**, and **Shadcn/UI**
 
 ---
 
@@ -26,7 +26,7 @@ git clone https://github.com/Harshi-max/ai_career_coach.git
 cd ai_career_coach
 
 
-### Make sure to create a `.env` file with following variables -
+ Make sure to create a `.env` file with following variables -
 
 # Database
 DATABASE_URL=your_neon_db_url_here
