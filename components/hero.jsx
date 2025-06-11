@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const HeroSection = () => {
-  const imageRef = useRef(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const imageElement = imageRef.current;
@@ -15,10 +15,12 @@ const HeroSection = () => {
       const scrollPosition = window.scrollY;
       const scrollThreshold = 100;
 
-      if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
-      } else {
-        imageElement.classList.remove("scrolled");
+      if (imageElement) {
+        if (scrollPosition > scrollThreshold) {
+          imageElement.classList.add("scrolled");
+        } else {
+          imageElement.classList.remove("scrolled");
+        }
       }
     };
 
@@ -40,14 +42,17 @@ const HeroSection = () => {
             AI-powered tools for job success.
           </p>
         </div>
+
         <div className="flex justify-center space-x-4">
           <Link href="/dashboard">
             <Button size="lg" className="px-8">
               Get Started
             </Button>
+          </Link>
         </div>
+
         <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
+          <div ref={imageRef} className="hero-image transition-all duration-500 ease-in-out">
             <Image
               src="/banner.jpeg"
               width={1280}
